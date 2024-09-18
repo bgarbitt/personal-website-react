@@ -7,6 +7,8 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [TanStackRouterVite(), react()],
   test: {
+    environment: 'jsdom',
+    setupFiles: ['./vitest-setup.ts'],
     globals: true,
   },
 })
