@@ -1,8 +1,14 @@
+import { Outlet, useLocation } from '@tanstack/react-router'
+import { useState } from 'react'
+import { HomeNavigation } from './pages/HomeNavigation/HomeNavigation'
+
 function App() {
+  const { pathname } = useLocation()
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="h-screen bg-gray-800 text-gray-200">
+      <HomeNavigation />
+      {pathname === '/' ? '' : <Outlet />}
+    </div>
   )
 }
 

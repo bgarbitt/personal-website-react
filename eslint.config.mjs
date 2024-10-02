@@ -9,5 +9,6 @@ export default antfu({
   extends: ['plugin:tailwindcss/recommended'],
   rules: {
     'antfu/top-level-function': ['off'],
+    'react-hooks/exhaustive-deps': ['error'],
   },
 }))
